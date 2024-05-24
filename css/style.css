@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.text h1, .text h2{
+    font-family: cursive;
+    text-shadow: 0px 0px 30px #ff0000;
+}
+body{
+    overflow-x: hidden;
+}
+html, body {
+    scroll-behavior: smooth;
+    background-color: #470000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* HEADER AND MENU */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(128, 0, 0) ;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    padding: 19px;
+    font-size: 19px;
+    display: inline;
+    transition: all .3s;
+}
+
+header h2 {
+    font-size: 33px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header a:hover {
+    background-color: #000;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    margin-top: 60px;
+    transition: all .3s;
+}
+
+/* MAIN - INFO */
+
+.info {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    background-color: rgba(128, 0, 0, 0.85);
+    margin: 19px;
+    width: 201vh;
+    border-radius: 20px;
+}
+.info .img {
+    right: 0;
+}
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    text-align: justify;
+    width: 70%;
+    font-size: 70px;
+    color: white;
+}
+.text img {
+    width: 60%;
+    margin-top: -80px;
+}
+.info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 201vh;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    border-radius: 20px;
+}
+
+/* MAIN - MENU */
+
+.menuAll{
+    margin: 19px;
+    border-radius: 26px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu img {
+    width: 100px;
+}
+
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: transparent;
+}
+
+/* TABS MENU */
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.tabs img {
+    width: 80px;
+}
+.tab {
+    padding: 10px 20px;
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+.tabInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tab-burguer{
+    background-color: #ffdb58b0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.tab-hotdogs{
+    background-color: #ffd90092;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.tab-extra{
+    background-color: #a3cd5a95;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.tab-active {
+    background-color: #FFDB58;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 1;
+}
+.tab.active::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid chartreuse;
+}
+
+/* MENU ALL */
+.menu {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #FFDB58;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: all .3s;
+}
+.menu li {
+    display: none;
+    padding: 10px 20px;
+}
+.menu img{
+    width: 150px;
+    height: 150px;
+}
+.menu li.active {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/* BURGUERS MENU */
+
+.burguers{
+    width: 100%;
+}
+.infoBurguer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.burguerInfo{
+    background-color: #202020;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 0px 15px 3px #020202;
+}
+.burguerInfoExt{
+    display: flex;
+}
+.price{
+    width: 100%;
+}
+/* HOTDOGS MENU */
+
+.hotDogs{
+    width: 100%;
+}
+.infoHotDogs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.hotDogsInfo{
+    background-color: #202020;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 0px 15px 3px #020202;
+}
+.hotDogsInfoExt{
+    display: flex;
+}
+/* EXTRA MENU */
+
+.extras{
+    width: 100%;
+}
+.infoExtra {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.extraInfo{
+    background-color: #202020;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 0px 15px 3px #020202;
+}
+.extraInfoExt{
+    display: flex;
+}
+/* MAIN - ABOUT US */
+
+.aboutUs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 19px;
+    border-radius: 25px;
+}
+.aboutUs h2{
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    color: #A2CD5A;
+}
+.aboutUs .historyAll img{
+    width: 450px;
+    border-radius: 50%;
+}
+.historyAll{
+    padding: 20px;
+}
+.img-history, .img-engagement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(
+        0 0 25px #000000
+    );
+}
+.history, .engagement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+.history .historyInfo, .engagement .engagementInfo{
+    background-color: #FFDB58;
+    border-radius: 0;
+    padding: 20px;
+}
+.history .historyInfo{
+    background-color: #A2CD5A;
+}
+.engagementInfo h3, .historyInfo h3{
+    font-size: 40px;
+}
+.engagementInfo h3{
+    text-align: right;
+}
+.engagement p, .history p{
+    font-size: 25px;
+}
+.aboutUs .historyAll{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* TEAM */
+
+.teamAll{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+}
+.person{
+    background-color: #a3cd5a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;   
+    height: 350px;
+    margin-left: 10px;
+    font-size: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 5px #470000;
+}
+.teamAll h2{
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+}
+.team{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.teamAll .team .person img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    filter: drop-shadow(
+        0 0 25px #000000
+    );
+}
+
+/* CONTACT */
+
+.footerAll{
+    background-color: #FFDB58;
+    padding: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.contactAll{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    align-items: center;
+}
+.contact a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.social img{
+    width: 40px;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contactForm form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+.contactForm form input{
+    border: none;
+    margin-bottom: 5px;
+    background: transparent;
+    border-bottom: 1px solid black;
+    outline: 0;
+    vertical-align: baseline;
+}
+.address{
+    text-align: end;
+}
+.buttonSubmit{
+    cursor: pointer;
+    background-color: #000;
+}
+
+.footer{
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
